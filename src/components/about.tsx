@@ -11,8 +11,8 @@ const About = () => {
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <Image
               className="object-cover object-center rounded-lg shadow-lg" 
-              alt="About Me Image"
-              src="/your-image.jpg" // Ensure this image is in the public folder
+              alt=""
+              src="/Hackhathon e-commerce deployment.png" // Ensure this image is in the public folder
               width={500}
               height={500}
             />
@@ -35,7 +35,7 @@ const About = () => {
             
             {/* CV Button */}
             <div className="flex justify-center">
-              <Link href="/CV-04-01-2024.pdf" passHref>
+              <Link href="/cv" passHref>
                 <button className="inline-flex text-white bg-gradient-to-r from-blue-500 to-teal-500 border-0 py-3 px-8 focus:outline-none hover:from-teal-500 hover:to-blue-500 hover:shadow-lg transition ease-in-out duration-300 rounded-full text-lg">
                   View CV
                 </button>
