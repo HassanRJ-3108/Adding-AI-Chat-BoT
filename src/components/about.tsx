@@ -11,8 +11,8 @@ const About = () => {
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <Image
               className="object-cover object-center rounded-lg shadow-lg" 
-              alt=""
-              src="/Hackhathon e-commerce deployment.png" // Ensure this image is in the public folder
+              alt="/Hackhathon e-commerce deployment.png"
+              src="/me.png" // Ensure this image is in the public folder
               width={500}
               height={500}
             />
