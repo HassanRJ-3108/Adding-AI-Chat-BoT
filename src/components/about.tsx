@@ -24,11 +24,10 @@ const About = () => {
               About Me
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              I am currently a college student, balancing my studies with part-time jobs to gain professional experience.
-              I am also enrolled in the Governor Sindh IT Program, where I recently completed the second quarter (Q2), focusing
-              on mastering Python. Through this program, I gained valuable skills in HTML, CSS, TypeScript, Node.js, Next.js,
-              and React. As I move into the third quarter, I am excited to dive deeper into Python and expand my expertise
-              in modern web development.
+              I am enrolled in the GIAIC where I recently completed the second quarter (Q2), now focusing on AI.
+               Through this program, I gained valuable skills in HTML, CSS, TypeScript, Node.js, Next.js, python
+               and React. As I move into the third quarter, I am excited to dive deeper into advanced development 
+               and expand my expertise in modern web development.
             </p>
 
             {/* View CV Button */}
