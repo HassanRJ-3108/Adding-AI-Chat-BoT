@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Project from "@/components/project";
 import About from "@/components/about";
 import Skill from "@/components/skills";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <Skill />
       <Project />
+      <Footer />
     </div>
   );
 }
