@@ -20,12 +20,13 @@ export const Footer = () => {
             <a href="https://www.linkedin.com/in/gulzar-bano-syeda-b3b7b1230" target="_blank" rel="noopener noreferrer">
               <Image src="/linkedin.png" alt="LinkedIn" width={40} height={40} className="transition duration-300 ease-in-out transform hover:scale-110" />
             </a>
-            <a href="https://github.com/Syedabanog-1" target="_blank" rel="noopener noreferrer">
-              <Image src="/github.png" alt="GitHub" width={40} height={40} className="transition duration-300 ease-in-out transform hover:scale-110" />
-            </a>
             <a href="https://web.facebook.com/people/Gulzar-Bano/pfbid0gcgEC1MH2Fd67NzH8Z7LVhrzFLzyciNVEugaXhUEPoJMDJCqEqWUpmnAcR8VuFhKl/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
               <Image src="/facebook.png" alt="Facebook" width={40} height={40} className="transition duration-300 ease-in-out transform hover:scale-110" />
             </a>
+            <a href="https://github.com/Syedabanog-1" target="_blank" rel="noopener noreferrer">
+              <Image src="/github.png" alt="GitHub" width={40} height={40} className="transition duration-300 ease-in-out transform hover:scale-110" />
+            </a>
+            
           </div>
         </div>
       </footer>
