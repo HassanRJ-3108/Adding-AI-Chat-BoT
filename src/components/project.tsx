@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 const projects = [
-
   {
     title: "Marketplace E-Commerce Website",
     description: "Marketplace E-commerce Fully Functional And Responsive Website",
@@ -21,7 +20,6 @@ const projects = [
     url: "https://clerk-authentication-five.vercel.app/",
     bgColor: "bg-green-900",
   },
-  
   {
     title: "Todo List Next.js",
     description: "A simple and efficient Todo List built with Next.js.",
@@ -44,39 +42,38 @@ const projects = [
 
 const Project = () => {
   return (
-    <div id="project">
-      <section className="text-gray-400 bg-gray-900 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-              My Projects
-            </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              I have successfully developed a variety of web applications and websites, showcasing my skills in both frontend and backend technologies. My projects reflect a strong focus on user experience and clean, maintainable code.
-            </p>
-          </div>
-          <div className="flex flex-wrap -m-4">
-            {projects.map((project, index) => (
-              <div key={index} className="lg:w-1/3 sm:w-1/2 p-4">
-                <div className={`px-8 py-10 relative z-10 w-full border-4 border-gray-800 ${project.bgColor} opacity-100` }>
-                  <h2 className="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">
-                    {project.title}
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-white mb-3">
-                    {project.title}
-                  </h1>
-                  <p className="leading-relaxed">
-                    {project.description}
-                  </p>
-                  <Link href={project.url} legacyBehavior>
-                    <a className="leading-relaxed text-yellow-500 mb-1 hover:underline" target="_blank">View Project</a>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div id="project" className="bg-gray-900 text-gray-400 py-16">
+      <div className="container mx-auto px-5">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
+            My Projects
+          </h1>
+          <p className="max-w-2xl mx-auto leading-relaxed text-base">
+            I have successfully developed a variety of web applications and websites, showcasing my skills in both frontend and backend technologies. My projects reflect a strong focus on user experience and clean, maintainable code.
+          </p>
         </div>
-      </section>
+        
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <div key={index} className="p-4">
+              <div className={`p-6 border-4 border-gray-800 ${project.bgColor} rounded-lg`}>
+                <h2 className="tracking-widest text-sm font-medium text-indigo-300 mb-1">
+                  {project.title}
+                </h2>
+                <h1 className="text-lg font-semibold text-white mb-3">
+                  {project.title}
+                </h1>
+                <p className="leading-relaxed mb-4">{project.description}</p>
+                <Link href={project.url} legacyBehavior>
+                  <a className="text-yellow-400 hover:text-yellow-300 underline" target="_blank">
+                    View Project
+                  </a>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

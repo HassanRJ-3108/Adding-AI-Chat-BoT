@@ -6,24 +6,24 @@ const About = () => {
   return (
     <div id='about'>
       <section className="text-gray-400 bg-gray-900 body-font">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="container mx-auto flex px-5 py-24 flex-col md:flex-row items-center">
           {/* Image Section */}
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
             <Image
               className="object-cover object-center rounded-lg shadow-lg"
               alt="Profile Image"
               src="/proimg.jpg"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
             />
           </div>
 
           {/* Text Section */}
-          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-white">
+          <div className="md:w-1/2 flex flex-col md:items-start items-center text-center md:text-left px-4">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
               About Me
             </h1>
-            <p className="mb-8 leading-relaxed text-lg text-gray-300">
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
               I am currently a college student, balancing my studies with part-time jobs to gain professional experience.
               I am also enrolled in the Governor Sindh IT Program, where I recently completed the second quarter (Q2), focusing
               on mastering Python. Through this program, I gained valuable skills in HTML, CSS, TypeScript, Node.js, Next.js,
@@ -31,11 +31,11 @@ const About = () => {
               in modern web development.
             </p>
 
-            {/* CV Button */}
-            <div className="flex justify-center">
+            {/* View CV Button */}
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link 
                 href="/cv" 
-                className="inline-flex text-white bg-gradient-to-r from-blue-500 to-teal-500 border-0 py-3 px-8 focus:outline-none hover:from-teal-500 hover:to-blue-500 hover:shadow-lg transition ease-in-out duration-300 rounded-full text-lg"
+                className="text-white bg-gradient-to-r from-blue-500 to-teal-500 py-3 px-6 rounded-full text-lg font-semibold text-center w-full sm:w-auto transition-all duration-300 hover:from-teal-500 hover:to-blue-500 hover:shadow-lg"
               >
                 View CV
               </Link>
