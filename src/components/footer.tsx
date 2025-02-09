@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-blue-500 to-indigo-600">
       <footer className="text-gray-200 body-font w-full">
