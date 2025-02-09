@@ -15,7 +15,7 @@ export const Footer = () => {
           </p>
           <div className="flex sm:ml-auto sm:mt-0 mt-4 space-x-4">
           <a href="https://www.twitter.com/GulzarBano3" target="_blank" rel="noopener noreferrer">
-              <Image src="/newtwitter.png" alt="Twitter" width={40} height={40} className="transition duration-300 ease-in-out transform hover:scale-110" />
+              <Image src="/twitter.png" alt="Twitter" width={40} height={40} className="transition duration-300 ease-in-out transform hover:scale-110" />
             </a>
             <a href="https://www.linkedin.com/in/gulzar-bano-syeda-b3b7b1230" target="_blank" rel="noopener noreferrer">
               <Image src="/linkedin.png" alt="LinkedIn" width={40} height={40} className="transition duration-300 ease-in-out transform hover:scale-110" />
