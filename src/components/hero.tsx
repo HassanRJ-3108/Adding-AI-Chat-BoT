@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="container mx-auto flex px-5 py-16 md:py-24 flex-col-reverse md:flex-row items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-10 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-5xl text-4xl mb-6 font-bold text-white">
-            Hi, I&apos;m <br />
+            Hi! I&apos;m <br />
             <span className="text-blue-500">Syeda Gulzar Bano</span>
           </h1>
           <br className="hidden lg:inline-block" />
