@@ -1,13 +1,15 @@
 import React from 'react';
-import { FaCheckSquare } from 'react-icons/fa';
 
 const skills = [
-  { name: 'HTML', percentage: 90 },
-  { name: 'CSS', percentage: 85 },
-  { name: 'Tailwind CSS', percentage: 80 },
-  { name: 'TypeScript', percentage: 75 },
-  { name: 'Next.js', percentage: 70 },
-  { name: 'React', percentage: 80 },
+  { name: 'Oracle', logo: '/oracle.png', percentage: 99 },
+  { name: 'HTML', logo: '/HTML.jpeg', percentage: 90 },
+  { name: 'CSS', logo: '/CSS.png', percentage: 85 },
+  { name: 'Tailwind CSS', logo: '/TAILWIND CSS.jpeg', percentage: 85 },
+  { name: 'Nodejs', logo: '/NODEJS.jpeg', percentage: 90 },
+  { name: 'TypeScript', logo: '/TS.jpeg', percentage: 97 },
+  { name: 'React', logo: '/REACT.jpeg', percentage: 88 },
+  { name: 'Next.js', logo: '/NEXTJS.jpeg', percentage: 78 },
+  { name: 'Python', logo: '/PYTHON.jpeg', percentage: 95},
 ];
 
 const Skill = () => {
@@ -29,9 +31,7 @@ const Skill = () => {
               <div key={skill.name} className="p-4">
                 <div className="flex flex-col rounded-lg h-full p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-white border border-gray-200">
                   <div className="flex items-center mb-3">
-                    <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white">
-                      <FaCheckSquare />
-                    </div>
+                    <img src={skill.logo} alt={skill.name} className="w-8 h-8 mr-3 rounded-full" />
                     <h2 className="text-gray-900 text-lg title-font font-medium">{skill.name}</h2>
                   </div>
                   <div className="flex-grow">

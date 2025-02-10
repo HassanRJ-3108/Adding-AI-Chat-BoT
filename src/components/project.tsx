@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const projects = [
   {
-    title: "Marketplace E-Commerce Website",
+    title: "Marketplace E-Commerce",
     description: "Marketplace E-commerce Fully Functional And Responsive Website",
     url: "https://hackhathon-ecommerce-website-eidb.vercel.app/",
     bgColor: "bg-purple-900",
