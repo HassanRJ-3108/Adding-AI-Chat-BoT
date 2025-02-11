@@ -27,7 +27,7 @@ export default function ContactPage() {
             style={{ backgroundColor: bgColor }}
             onMouseMove={handleMouseMove}
         >
-            <div className="bg-green-500 shadow-lg rounded-2xl p-6 w-full max-w-sm md:max-w-md text-center border-4 border-green-700">
+            <div className="bg-blue-500 shadow-lg rounded-2xl p-6 w-full max-w-sm md:max-w-md text-center border-4 border-blue-900">
                 <h2 className="text-xl md:text-2xl font-semibold text-pink-500 mb-4">Contact Us</h2>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                     <input
