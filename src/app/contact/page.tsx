@@ -1,34 +1,38 @@
 'use client';
 
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState } from 'react';
 
 export default function ContactPage() {
-    const [bgColor, setBgColor] = useState('#f3f4f6');
+    const [bgColor, setBgColor] = useState('#f9fafb');
     const [formData, setFormData] = useState({ name: '', email: '', feedback: '' });
+    const [message, setMessage] = useState('');
+
+    // Lighter color palette
+    const colors = ['#DFFFD6', '#D6EAF8', '#F2F3F4', '#EADCF8', '#F8D6E8', '#FFF9C4', '#EEDAC2'];
 
     const handleMouseMove = () => {
-        const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
         setBgColor(randomColor);
     };
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        alert('Thank you for your response! 😊');
+        setMessage('Thank you for contacting us. 😊');
         setFormData({ name: '', email: '', feedback: '' });
     };
 
     return (
         <div
-            className="flex flex-col items-center justify-center min-h-screen px-4 py-6 transition-colors duration-200"
+            className="flex flex-col items-center justify-center min-h-screen px-4 py-6 transition-colors duration-300"
             style={{ backgroundColor: bgColor }}
             onMouseMove={handleMouseMove}
         >
-            <div className="bg-blue-400 shadow-lg rounded-2xl p-6 w-full max-w-sm md:max-w-md text-center border-4 border-blue-500">
-                <h2 className="text-xl md:text-2xl font-semibold text-pink-500 mb-4">Contact Us</h2>
+            <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm md:max-w-md text-center border-4 border-blue-300">
+                <h2 className="text-xl md:text-2xl font-semibold text-blue-500 mb-4">Contact Us</h2>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                     <input
                         type="text"
@@ -36,7 +40,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Enter your Name"
-                        className="p-3 w-full rounded-md border focus:outline-none"
+                        className="p-3 w-full rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         required
                     />
                     <input
@@ -45,7 +49,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Enter your Email"
-                        className="p-3 w-full rounded-md border focus:outline-none"
+                        className="p-3 w-full rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         required
                     />
                     <textarea
@@ -53,14 +57,22 @@ export default function ContactPage() {
                         value={formData.feedback}
                         onChange={handleChange}
                         placeholder="Your Feedback"
-                        className="p-3 w-full rounded-md border focus:outline-none"
+                        className="p-3 w-full rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         rows={4}
                         required
                     />
-                    <button type="submit" className="bg-pink-500 text-white p-3 rounded-md hover:bg-blue-700 transition w-full">
+                    <button type="submit" className="bg-blue-500 text-white p-3 rounded-md hover:bg-blue-700 transition w-full">
                         Submit
                     </button>
                 </form>
+                {message && (
+                    <input
+                        type="text"
+                        value={message}
+                        readOnly
+                        className="mt-4 p-3 w-full rounded-md border border-green-500 text-green-600 text-center bg-green-50"
+                    />
+                )}
             </div>
         </div>
     );

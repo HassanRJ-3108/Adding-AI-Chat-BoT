@@ -14,7 +14,7 @@ export default function Home() {
       {/* Skills Button */}
       <div className="flex justify-center my-6">
         <Link href="/skills">
-          <div className="flex items-center gap-2 bg-pink-500 text-green-500 font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-pink-600 transition">
+          <div className="flex items-center gap-2 bg-blue-400 text-blue-900 font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-gray-800 transition">
             <Image src="/EDUCATION.png" alt="Skills Logo" width={24} height={24} />
             <span>Skills</span>
           </div>
