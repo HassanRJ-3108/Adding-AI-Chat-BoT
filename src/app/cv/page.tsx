@@ -10,6 +10,7 @@ const CV = () => {
         <div className="text-center">
           <h2 className="text-2xl font-semibold mb-4">Contact</h2>
           <p><strong>Phone:</strong> +92 3363893198</p>
+          <p><strong>Email:</strong> syedagulzarbano@gmail.com</p>
           <p><strong>Address:</strong></p>
           <p>H-39/4, Malir Extension Colony, Karachi-75080.</p>
         </div>
