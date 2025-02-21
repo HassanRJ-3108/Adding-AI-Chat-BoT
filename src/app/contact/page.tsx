@@ -6,8 +6,8 @@ export default function ContactPage() {
     const [bgColor, setBgColor] = useState('#f9fafb');
     const [formData, setFormData] = useState({ name: '', email: '', feedback: '' });
     const [message, setMessage] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // Lighter color palette
     const colors = ['#DFFFD6', '#D6EAF8', '#F2F3F4', '#EADCF8', '#F8D6E8', '#FFF9C4', '#EEDAC2'];
 
     const handleMouseMove = () => {
@@ -21,8 +21,14 @@ export default function ContactPage() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setMessage('Thank you for contacting us. 😊');
+        setMessage('Thank you for your feedback. 😊');
+        setIsSubmitted(true);
         setFormData({ name: '', email: '', feedback: '' });
+
+        setTimeout(() => {
+            setMessage('');
+            setIsSubmitted(false);
+        }, 2000);
     };
 
     return (
@@ -61,17 +67,19 @@ export default function ContactPage() {
                         rows={4}
                         required
                     />
-                    <button type="submit" className="bg-blue-500 text-white p-3 rounded-md hover:bg-blue-700 transition w-full">
-                        Submit
+                    <button
+                        type="submit"
+                        className={`p-3 rounded-md transition w-full ${
+                            isSubmitted ? 'bg-green-500 text-white' : 'bg-blue-500 text-white hover:bg-blue-700'
+                        }`}
+                    >
+                        {isSubmitted ? 'Submitted ✅' : 'Submit'}
                     </button>
                 </form>
                 {message && (
-                    <input
-                        type="text"
-                        value={message}
-                        readOnly
-                        className="mt-4 p-3 w-full rounded-md border border-green-500 text-green-600 text-center bg-green-50"
-                    />
+                    <div className="mt-4 p-3 w-full rounded-md border border-green-500 text-green-600 text-center bg-green-50">
+                        {message}
+                    </div>
                 )}
             </div>
         </div>
